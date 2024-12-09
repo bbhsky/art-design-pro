@@ -11,7 +11,7 @@ import viteImagemin from 'vite-plugin-imagemin'
 export default ({ mode }) => {
   const root = process.cwd()
   const env = loadEnv(mode, root)
-  const { VITE_VERSION, VITE_PORT, VITE_BASE_URL, VITE_API_URL } = env
+  const { VITE_VERSION, VITE_PORT, VITE_BASE_URL, VITE_API_URL, VITE_OPEN } = env
 
   console.log(`🚀 API_URL = ${VITE_API_URL}`)
   console.log(`🚀 VERSION = ${VITE_VERSION}`)
@@ -22,6 +22,7 @@ export default ({ mode }) => {
     },
     base: VITE_BASE_URL,
     server: {
+      open: VITE_OPEN,
       port: parseInt(VITE_PORT),
       proxy: {
         '/api': {
