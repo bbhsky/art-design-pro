@@ -3,8 +3,7 @@
 @forward 'element-plus/theme-chalk/src/common/var.scss' // Element 自定义主题
   with (
   //
-  $colors:
-    (
+  $colors: (
       //
       'white': #ffffff,
       'black': #000000,

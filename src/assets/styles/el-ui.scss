@@ -135,7 +135,7 @@
 }
 
 .el-tag--success {
-  background-color: --main-color !important;
+  background-color: var(--main-color) !important;
 }
 
 .dark {
